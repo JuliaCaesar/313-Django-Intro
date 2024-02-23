@@ -1,0 +1,8 @@
+1. open a new terminal and cd to first_project
+(path should be this: PS C:\...\GitHub\313-Django-Intro\django\313-Django\first_project> )
+2. run this command: python manage.py runserver
+3. It should output something that says:
+...
+Starting development server at http://127.0.0.1:800/  <-- (this ip might be different for you)
+...
+4. either copy and paste that link into the browser, or click the link and there should be a hover box that says "follow link" and you can click that. 
