@@ -3,6 +3,6 @@
 2. run this command: python manage.py runserver
 3. It should output something that says:
 ...
-Starting development server at http://127.0.0.1:800/  <-- (this ip might be different for you)
+Starting development server at http://127.0.0.1:800/  <-- (if you are running django more than once, the ip will increment)
 ...
 4. either copy and paste that link into the browser, or click the link and there should be a hover box that says "follow link" and you can click that. 
