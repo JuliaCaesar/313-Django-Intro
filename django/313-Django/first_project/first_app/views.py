@@ -13,4 +13,10 @@ def index(request):
     return render(request, 'first_app/index.html', context=dict)
 
 def about(request):
-    return HttpResponse('<h1>This is the About Page</h1>') 
+    dict = {
+        "insert_me" : "This is from views.py", 
+        "fname" : "Rose",
+        "lname" : "Tyler",
+        "age" : "sad"
+    }
+    return render(request, 'first_app/about.html', context=dict) 
