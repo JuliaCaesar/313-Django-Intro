@@ -6,7 +6,7 @@ class Department(models.Model):
 	location = models.CharField(max_length = 30)
 
 	def __str__(self):
-		return self.dept_id
+		return self.dept_name
 	
 class Employee(models.Model):
 	emp_id=models.AutoField(primary_key = True)
