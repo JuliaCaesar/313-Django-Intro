@@ -10,14 +10,37 @@
 </head>
   <body>
     <div class='container'>
-        <img src="{% static 'first_app/images/sad.jpg' %}" alt="">
+      {% if emp %} 
+        <table class='table table-striped'>
+          <thead>
+            <th>Employee ID</th>
+            <th>Employee Name</th>
+            <th>Department</th>
+            <th>Age</th>
+            <th>Start Date</th>
+          </thead>
+          {% for e in emp %}
+            <tr>
+              <td>{{e.emp_id}}</td>
+              <td>{{e.emp_name}}</td>
+              <td>{{e.dept}}</td>
+              <td>{{e.age}}</td>
+              <td>{{e.start_date}}</td>
+            </tr>
+          {% endfor %}
+        </table>
+      {% else %}
+        <p>No employee records found</p>
+      {% endif %}
+
+        {% comment %} <img src="{% static 'first_app/images/sad.jpg' %}" alt="">
         <h1>{{insert_me}}</h1>
         <ul>
             <li>First Name: {{fname}}</li>
             <li>Last Name: {{lname}}</li>
             <li>Age: {{age}}</li>
         </ul>
-        <a href="{% url 'about' %}">Link to About Page</a>
+        <a href="{% url 'about' %}">Link to About Page</a> {% endcomment %}
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
